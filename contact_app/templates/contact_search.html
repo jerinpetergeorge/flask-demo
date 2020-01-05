@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Search</title>
+</head>
+<body>
+<h2> Contact Search</h2>
+{% for contact in all_contacts %}
+    <p>{{ contact.id }} -- {{ contact.email }}</p>
+
+{% endfor %}
+</body>
+</html>

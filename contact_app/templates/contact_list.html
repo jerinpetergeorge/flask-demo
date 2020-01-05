@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact List</title>
+</head>
+<body>
+<h2> Contact List</h2>
+{% for contact in all_contacts %}
+    <form action="{{ url_for('contact_delete_view', contact_id=contact.id) }}" method=post class=delete-contact>
+        <p>{{ contact.id }} -- {{ contact.email }}</p>
+        <button type="submit">Delete Contact ({{ contact.id }})</button>
+    </form>
+
+{% endfor %}
+</body>
+</html>
